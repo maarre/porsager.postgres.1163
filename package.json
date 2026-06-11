@@ -1,0 +1,61 @@
+{
+  "dependencies": {
+    "commander": "14.0.3",
+    "postgres": "3.4.7",
+    "uuid": "13.0.0",
+    "loglayer": "9.1.0",
+    "prexit": "2.3.0",
+    "@loglayer/log-level-manager-one-way": "2.0.2",
+    "@loglayer/shared": "4.1.0",
+    "@loglayer/transport-simple-pretty-terminal": "3.0.2",
+    "why-is-node-running": "3.2.1",
+    "glob": "13.0.6"
+  },
+  "name": "d7-dog_subsidy-wrappers",
+  "version": "1.0.1775713576172+alpha",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    "./personwrapper.entity": "./dist/personwrapper.entity.js",
+    "./personwrapper": "./dist/personwrapper.js",
+    "./helpers": "./dist/helpers.js"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*"
+      ]
+    }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "@types/node": "25.5.2",
+    "tsup": "8.5.1",
+    "chokidar": "5.0.0",
+    "typescript": "5.9.3",
+    "vitest": "4.0.15"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "!**/*.test.js",
+    "dist/**/*.cjs",
+    "dist/**/*.cts"
+  ],
+  "scripts": {
+    "build": "tsc && tsup",
+    "dev": "tsup --watch",
+    "clean": "tsc --build --clean",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "make": "pnpm run build && pnpm pack && pnpm publish  --no-git-checks",
+    "update": "tsc"
+  },
+  "keywords": [
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "timestamp": "1775713576172"
+}
