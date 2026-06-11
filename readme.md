@@ -3,6 +3,10 @@ Example code to illustrate bug report https://github.com/porsager/postgres/issue
 # The example code
 I have taken a working example application and removed a lot of code. The remaining code is working. The make.sh creates the database, builds the application, and imports 20 files in parallel.
 # How to recreate the error
+## Clone
+```
+git clone git@github.com:maarre/porsager.postgres.1163.git
+```
 ## Build with 3.4.7
 ### Run the make.sh
 Either run the make.sh (after looking into it of course) or follow the steps in the following chapter.
